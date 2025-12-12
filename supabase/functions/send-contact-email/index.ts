@@ -31,6 +31,7 @@ const handler = async (req: Request): Promise<Response> => {
     const emailResponse = await resend.emails.send({
       from: "Booking Pilot <noreply@resend.dev>",
       to: ["hello@bookingpilot.ai"],
+      bcc: ["bookingcopilot@gmail.com"],
       subject: `New Contact Form Submission from ${company}`,
       html: `
         <h2>New Contact Form Submission</h2>
